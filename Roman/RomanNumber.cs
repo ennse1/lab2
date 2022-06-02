@@ -13,13 +13,13 @@ namespace RomanNumbers
         private static  int[] values = new int[] { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
         private static string[] roman = new string[]
             { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
-        //Конструктор получает представление числа n в римской записи
+            
         public RomanNumber(ushort n)
         {
             if (n <= 0) throw new RomanNumberException($"Число {n} меньше либо равно 0") ;
             else this._number = n;
         }
-        //Сложение римских чисел
+        
         public static RomanNumber Add(RomanNumber? n1, RomanNumber? n2)
         {
             int num = n1._number + n2._number;
@@ -30,7 +30,7 @@ namespace RomanNumbers
                 return result;
             }
         }
-        //Вычитание римских чисел
+
         public static RomanNumber Sub(RomanNumber? n1, RomanNumber? n2)
         {
             int num = n1._number - n2._number;
@@ -41,7 +41,7 @@ namespace RomanNumbers
                 return result;
             }
         }
-        //Умножение римских чисел
+
         public static RomanNumber Mul(RomanNumber? n1, RomanNumber? n2)
         {
             int num = n1._number*n2._number;
@@ -52,10 +52,9 @@ namespace RomanNumbers
                 return result;
             }
         }
-        //Целочисленное деление римских чисел
+
         public static RomanNumber Div(RomanNumber? n1, RomanNumber? n2)
         {
-            
             if (n2._number == 0) throw new RomanNumberException("Ошибка деления!");
             else
             {
@@ -68,7 +67,7 @@ namespace RomanNumbers
                 }
             }
         }
-        //Возвращает строковое представление римского числа
+
         public override string ToString()
         {
             int tmp = _number;
@@ -85,7 +84,6 @@ namespace RomanNumbers
                 throw new RomanNumberException("Перевод числа в Римские цифры невозможен");
             else
                 return result.ToString();
-
         }
 
         public object Clone()
@@ -100,7 +98,5 @@ namespace RomanNumbers
             else
                 throw new RomanNumberException("object is not a RomanNumber");
         }
-
     }
-
 }
