@@ -8,8 +8,6 @@ namespace RomanNumbers
         {
             try
             {
-                //RomanNumberExcaption
-               // RomanNumber r1 = new RomanNumber(0);
                 RomanNumber r2 = new RomanNumber(25);
                 RomanNumber r3 = new RomanNumber(5);
                 RomanNumber r4 = new RomanNumber(13);
